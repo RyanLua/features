@@ -12,11 +12,17 @@ unzip aftman-$AFTMAN_VERSION-linux-x86_64.zip
 . ~/.profile
 
 # Install Rojo
-if [ $VERSION == "latest" ]
+if [[ -z "${VERSION}" ]]; then
+ROJO_VERSION="latest"
+else
+ROJO_VERSION="${VERSION}"
+fi
+
+if [ $ROJO_VERSION == "latest" ]
 then
     aftman add --global rojo-rbx/rojo
 else
-    aftman add --global rojo-rbx/rojo@${VERSION}
+    aftman add --global rojo-rbx/rojo@${ROJO_VERSION}
 fi
 aftman trust rojo
 aftman install
