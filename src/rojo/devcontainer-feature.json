@@ -1,0 +1,21 @@
+{
+    "name": "Rojo",
+    "id": "rojo",
+    "version": "0.1.0",
+    "description": "Installs the provided version of Rojo, as well as Aftman.",
+    "options": {
+        "version": {
+            "type": "string",
+            "enum": [
+                "latest",
+                "6.2.0",
+                "0.5.4"
+            ],
+            "default": "latest",
+            "description": "Select a Rojo version to install."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
