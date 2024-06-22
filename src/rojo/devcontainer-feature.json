@@ -15,6 +15,13 @@
             "description": "Select a Rojo version to install."
         }
     },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "evaera.vscode-rojo"
+            ]
+        }
+    },
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"
     ]
