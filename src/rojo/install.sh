@@ -3,6 +3,8 @@ set -e
 
 echo "Activating feature 'rojo'"
 
+ROJO_VERSION="${VERSION:-"latest"}"
+
 # Make sure we have a temporary directory
 TMPDIR=/home/vscode/tmp
 mkdir -p $TMPDIR
@@ -18,9 +20,8 @@ aftman self-install
 # Install Rojo
 aftman trust rojo-rbx/rojo
 
-if [ "${ROJO_VERSION:-latest}" = "latest" ]
-then
+if [ "${ROJO_VERSION}" = "latest" ]; then
     aftman add --global rojo-rbx/rojo
 else
-    aftman add --global rojo-rbx/rojo@"${ROJO_VERSION}"
+    aftman add --global rojo-rbx/rojo@"$ROJO_VERSION"
 fi
