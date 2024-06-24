@@ -2,7 +2,9 @@
     "rojo_at_pinned_version": {
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
-            "version": "6.2.0"
+            "rojo": {
+                "version": "6.2.0"
+            }
         }
     }
 }
