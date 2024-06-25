@@ -6,21 +6,22 @@ echo "Activating feature 'rojo'"
 ROJO_VERSION="${VERSION:-"latest"}"
 AFTMAN_VERSION=0.3.0
 
+# Clean up
+rm -rf /var/lib/apt/lists/*
+
 # Function to run apt-get if needed
-apt_get_update_if_needed()
+apt_get_update()
 {
-    if [ ! -d "/var/lib/apt/lists" ] || [ "$(ls /var/lib/apt/lists/ | wc -l)" = "0" ]; then
+    if [ "$(find /var/lib/apt/lists/* | wc -l)" = "0" ]; then
         echo "Running apt-get update..."
-        apt-get update
-    else
-        echo "Skipping apt-get update."
+        apt-get update -y
     fi
 }
 
 # Checks if packages are installed and installs them if not
 check_packages() {
     if ! dpkg -s "$@" > /dev/null 2>&1; then
-        apt_get_update_if_needed
+        apt_get_update
         apt-get -y install --no-install-recommends "$@"
     fi
 }
