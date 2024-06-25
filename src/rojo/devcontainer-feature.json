@@ -2,7 +2,8 @@
     "name": "Rojo",
     "id": "rojo",
     "version": "0.1.0",
-    "description": "Installs the provided version of Rojo, as well as Aftman.",
+    "documentationURL": "https://github.com/RyanLua/features/tree/main/src/rojo",
+    "description": "Installs the provided version of Rojo, as well as Aftman and dependencies.",
     "options": {
         "version": {
             "type": "string",
