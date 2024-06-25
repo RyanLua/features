@@ -61,7 +61,7 @@ find_version_from_git_tags() {
 }
 
 # Install dependencies
-check_packages wget unzip
+check_packages ca-certificates wget unzip
 if ! type git > /dev/null 2>&1; then
     check_packages git
 fi
