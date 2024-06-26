@@ -10,8 +10,7 @@ source dev-container-features-test-lib
 
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib.
-check "rojo version" rojo  --version
-check "correct rojo version" rojo  --version | ${VERSION}
+check "aftman version" aftman  --version
 
 # Report results
 # If any of the checks above exited with a non-zero exit code, the test will fail.

@@ -9,6 +9,7 @@ fi
 echo "Activating feature 'rojo'"
 
 ROJO_VERSION=${VERSION:-"latest"}
+INSTALL_AFTMAN=${INSTALLAFTMAN:-"true"}
 AFTMAN_VERSION="latest"
 
 # Clean up
@@ -83,13 +84,15 @@ TMPDIR=/home/vscode/tmp
 mkdir -p $TMPDIR
 
 # Install Aftman
-find_version_from_git_tags AFTMAN_VERSION https://github.com/LPGhatguy/aftman
-aftman_filename="aftman-${AFTMAN_VERSION}-linux-${ARCH}.zip"
+if [ "${INSTALL_AFTMAN}" = "true" ]; then
+    find_version_from_git_tags AFTMAN_VERSION https://github.com/LPGhatguy/aftman
+    aftman_filename="aftman-${AFTMAN_VERSION}-linux-${ARCH}.zip"
 
-wget https://github.com/LPGhatguy/aftman/releases/download/v${AFTMAN_VERSION}/${aftman_filename}
-unzip ${aftman_filename} -d $TMPDIR
-mv $TMPDIR/aftman /usr/local/bin/aftman
-aftman self-install
+    wget https://github.com/LPGhatguy/aftman/releases/download/v${AFTMAN_VERSION}/${aftman_filename}
+    unzip ${aftman_filename} -d $TMPDIR
+    mv $TMPDIR/aftman /usr/local/bin/aftman
+    aftman self-install
+fi
 
 # Install Rojo
 find_version_from_git_tags ROJO_VERSION https://github.com/rojo-rbx/rojo

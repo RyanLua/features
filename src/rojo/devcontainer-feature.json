@@ -26,6 +26,11 @@
             ],
             "default": "latest",
             "description": "Select a Rojo version to install."
+        },
+        "installAftman": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install Aftman, a toolchain manager for tools like Rojo."
         }
     },
     "customizations": {
