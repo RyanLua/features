@@ -87,15 +87,14 @@ find_version_from_git_tags AFTMAN_VERSION https://github.com/LPGhatguy/aftman
 aftman_filename="aftman-${AFTMAN_VERSION}-linux-${ARCH}.zip"
 
 wget https://github.com/LPGhatguy/aftman/releases/download/v${AFTMAN_VERSION}/${aftman_filename}
-unzip aftman-${AFTMAN_VERSION}-linux-x86_64.zip -d $TMPDIR
+unzip ${aftman_filename} -d $TMPDIR
 mv $TMPDIR/aftman /usr/local/bin/aftman
 aftman self-install
 
 # Install Rojo
-aftman trust rojo-rbx/rojo
+find_version_from_git_tags ROJO_VERSION https://github.com/rojo-rbx/rojo
+rojo_filename="rojo-${ROJO_VERSION}-linux-${ARCH}.zip"
 
-if [ "${ROJO_VERSION}" = "latest" ]; then
-    aftman add --global rojo-rbx/rojo
-else
-    aftman add --global rojo-rbx/rojo@"$ROJO_VERSION"
-fi
+wget https://github.com/rojo-rbx/rojo/releases/download/v${ROJO_VERSION}/${rojo_filename}
+unzip ${rojo_filename} -d $TMPDIR
+mv $TMPDIR/rojo /usr/local/bin/rojo

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # This test file will be executed against one of the scenarios devcontainer.json test that
-# includes the 'rojo' feature with "version": "6.2.0" option.
+# includes the 'rojo' feature with "version": "7.3.0" option.
 
 set -e
 
@@ -12,7 +12,7 @@ source dev-container-features-test-lib
 # The 'check' command comes from the dev-container-features-test-lib.
 check "aftman version" aftman  --version
 check "rojo version" rojo  --version
-check "correct rojo version" rojo  --version | grep 6.2.0
+check "correct rojo version" rojo  --version | grep 7.3.0
 
 # Report results
 # If any of the checks above exited with a non-zero exit code, the test will fail.
