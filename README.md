@@ -1,5 +1,7 @@
 # Rojo Dev Container Feature
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/RyanLua/features?quickstart=1)
+
 This is a feature for Rojo which allows you to use Rojo in dev containers. This is useful for developing Roblox experiences using tools such as [GitHub Codespaces](https://github.com/features/codespaces).
 
 ## Usage
