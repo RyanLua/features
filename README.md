@@ -1,6 +1,8 @@
 # Rojo Dev Container Feature
 
-This is a feature for Rojo which allows you to use Rojo in dev containers. This is useful for developing Roblox experiences using tools such as [GitHub Codespaces](https://github.com/features/codespaces).
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/RyanLua/features?quickstart=1)
+
+A dev container feature that installs [Rojo](https://rojo.space/) and optionally [Aftman](https://github.com/LPGhatguy/aftman) for toolchain management. Useful for developing Roblox experiences using [dev container supported tools](https://containers.dev/supporting.html) such as [GitHub Codespaces](https://github.com/features/codespaces).
 
 ## Usage
 
