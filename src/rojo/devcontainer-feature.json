@@ -9,7 +9,7 @@
     "options": {
         "version": {
             "type": "string",
-            "enum": [
+            "proposals": [
                 "latest",
                 "7.4.1",
                 "7.4.0",
@@ -27,7 +27,7 @@
                 "0.1.0"
             ],
             "default": "latest",
-            "description": "Select a Rojo version to install."
+            "description": "Select or enter a version of Rojo to install."
         },
         "installAftman": {
             "type": "boolean",
