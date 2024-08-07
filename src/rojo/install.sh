@@ -9,8 +9,11 @@ fi
 echo "Activating feature 'rojo'"
 
 ROJO_VERSION=${VERSION:-"latest"}
-INSTALL_AFTMAN=${INSTALLAFTMAN:-"true"}
+TOOLCHAIN_MANAGER=${TOOLCHAIN:-"rokit"}
+
 AFTMAN_VERSION="latest"
+FOREMAN_VERSION="latest"
+ROKIT_VERSION="latest"
 
 # Clean up
 rm -rf /var/lib/apt/lists/*
@@ -84,7 +87,7 @@ TMPDIR=/home/vscode/tmp
 mkdir -p $TMPDIR
 
 # Install Aftman
-if [ "${INSTALL_AFTMAN}" = "true" ]; then
+if [ "${TOOLCHAIN_MANAGER}" = "aftman" ]; then
     find_version_from_git_tags AFTMAN_VERSION https://github.com/LPGhatguy/aftman
     aftman_filename="aftman-${AFTMAN_VERSION}-linux-${ARCH}.zip"
 
@@ -92,6 +95,31 @@ if [ "${INSTALL_AFTMAN}" = "true" ]; then
     unzip ${aftman_filename} -d $TMPDIR
     mv $TMPDIR/aftman /usr/local/bin/aftman
     aftman self-install
+fi
+
+# Install Foreman
+if [ "${TOOLCHAIN_MANAGER}" = "foreman" ]; then
+    find_version_from_git_tags FOREMAN_VERSION https://github.com/Roblox/foreman
+    foreman_filename="foreman-linux.zip"
+
+    wget https://github.com/Roblox/foreman/releases/download/v${FOREMAN_VERSION}/${foreman_filename}
+    unzip ${foreman_filename} -d $TMPDIR
+
+    mv $TMPDIR/foreman /usr/local/bin/foreman
+    chmod +x /usr/local/bin/foreman
+fi
+
+# Install Rokit
+if [ "${TOOLCHAIN_MANAGER}" = "rokit" ]; then
+    check_packages curl
+    find_version_from_git_tags ROKIT_VERSION https://github.com/rojo-rbx/rokit
+    rokit_filename="rokit-${ROKIT_VERSION}-linux-${ARCH}.zip"
+
+    wget https://github.com/rojo-rbx/rokit/releases/download/v${ROKIT_VERSION}/${rokit_filename}
+    unzip ${rokit_filename} -d $TMPDIR
+
+    mv $TMPDIR/rokit /usr/local/bin/rokit
+    rokit self-install
 fi
 
 # Install Rojo
