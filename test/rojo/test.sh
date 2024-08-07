@@ -40,7 +40,7 @@ source dev-container-features-test-lib
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib. Syntax is...
 # check <LABEL> <cmd> [args...]
-check "aftman version" aftman  --version
+check "rokit version" rokit  --version
 check "rojo version" rojo  --version
 
 # Report results
