@@ -28,7 +28,7 @@ To use this feature, add the following to your `devcontainer.json` file:
 "features": {
 	"ghcr.io/ryanlua/features/rojo:latest": {
 		"version": "latest",
-		"installAftman": true
+		"toolchainManager": "rokit"
 	}
 }
 ```
