@@ -11,7 +11,7 @@
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
             "rojo": {
-                "toolchain": "aftman"
+                "toolchainManager": "aftman"
             }
         }
     },
@@ -19,7 +19,7 @@
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
             "rojo": {
-                "toolchain": "foreman"
+                "toolchainManager": "foreman"
             }
         }
     },
@@ -27,7 +27,7 @@
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
             "rojo": {
-                "toolchain": "rokit"
+                "toolchainManager": "rokit"
             }
         }
     }

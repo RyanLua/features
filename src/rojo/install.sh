@@ -9,7 +9,7 @@ fi
 echo "Activating feature 'rojo'"
 
 ROJO_VERSION=${VERSION:-"latest"}
-TOOLCHAIN_MANAGER=${TOOLCHAIN:-"rokit"}
+TOOLCHAIN_MANAGER=${TOOLCHAINMANAGER:-"rokit"}
 
 AFTMAN_VERSION="latest"
 FOREMAN_VERSION="latest"

@@ -29,7 +29,7 @@
             "default": "latest",
             "description": "Select or enter a version of Rojo to install."
         },
-        "toolchain": {
+        "toolchainManager": {
             "type": "string",
             "enum": [
                 "aftman",
