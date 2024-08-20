@@ -2,10 +2,10 @@
     "id": "rojo",
     "version": "0.2.0",
     "name": "Rojo",
-    "description": "Installs the provided version of Rojo, as well as Aftman and dependencies.",
+    "description": "Installs the provided version of Rojo, a toolchain manager and dependencies.",
     "documentationURL": "https://github.com/RyanLua/features/tree/main/src/rojo",
     "licenseURL": "https://github.com/RyanLua/features/blob/main/LICENSE",
-    "keywords": ["rojo", "roblox", "aftman"],
+    "keywords": ["rojo", "roblox", "aftman", "foreman", "rokit"],
     "options": {
         "version": {
             "type": "string",
