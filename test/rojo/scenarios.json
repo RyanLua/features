@@ -11,7 +11,23 @@
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
             "rojo": {
-                "installAftman": "true"
+                "toolchainManager": "aftman"
+            }
+        }
+    },
+    "install_foreman": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "rojo": {
+                "toolchainManager": "foreman"
+            }
+        }
+    },
+    "install_rokit": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "rojo": {
+                "toolchainManager": "rokit"
             }
         }
     }
