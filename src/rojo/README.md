@@ -15,8 +15,8 @@ Installs the provided version of Rojo, as well as Aftman and dependencies.
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| version | Select a Rojo version to install. | string | latest |
-| installAftman | Install Aftman, a toolchain manager for tools like Rojo. | boolean | true |
+| version | Select or enter a version of Rojo to install. | string | latest |
+| toolchainManager | Select a toolchain manager to install. | string | rokit |
 
 ## Customizations
 
