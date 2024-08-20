@@ -2,7 +2,7 @@
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/RyanLua/features?quickstart=1)
 
-A dev container feature that installs [Rojo](https://rojo.space/) and optionally [Aftman](https://github.com/LPGhatguy/aftman) for toolchain management. Useful for developing Roblox experiences using [dev container supported tools](https://containers.dev/supporting.html) such as [GitHub Codespaces](https://github.com/features/codespaces).
+A dev container feature that installs [Rojo](https://rojo.space/) and optionally [Rokit](https://github.com/rojo-rbx/rokit), [Aftman](https://github.com/LPGhatguy/aftman), or [Foreman](https://github.com/Roblox/foreman) for toolchain management. Useful for developing Roblox experiences using [dev container supported tools](https://containers.dev/supporting.html) such as [GitHub Codespaces](https://github.com/features/codespaces).
 
 ## Known issues and remarks
 
