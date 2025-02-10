@@ -1,6 +1,7 @@
 # Rojo Dev Container Feature
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/RyanLua/features?quickstart=1)
+[![Open in Codeanywhere](https://img.shields.io/badge/Open%20in-Codeanywhere-blue?style=for-the-badge&logo=codeanywhere)](https://app.codeanywhere.com/#https://github.com/RyanLua/features/)
 
 A dev container feature that installs [Rojo](https://rojo.space/) and optionally [Rokit](https://github.com/rojo-rbx/rokit), [Aftman](https://github.com/LPGhatguy/aftman), or [Foreman](https://github.com/Roblox/foreman) for toolchain management. Useful for developing Roblox experiences using [dev container supported tools](https://containers.dev/supporting.html) such as [GitHub Codespaces](https://github.com/features/codespaces).
 
