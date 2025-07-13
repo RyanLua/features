@@ -40,9 +40,10 @@ source dev-container-features-test-lib
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib. Syntax is...
 # check <LABEL> <cmd> [args...]
-check "rokit version" rokit  --version
-check "rojo version" rojo  --version
-check "rokit can install lune and execute it" bash -c 'rokit init && rojo init && rokit trust lune-org/lune && rokit add lune-org/lune && lune setup && lune --version'
+check "rokit version" rokit --version
+check "rojo version" rojo --version
+check "rokit can install wally" rokit init && rokit add --force UpliftGames/wally && wally --version
+check "rokit can install wally global" rokit add --global --force UpliftGames/wally && wally --version
 
 # Report results
 # If any of the checks above exited with a non-zero exit code, the test will fail.
