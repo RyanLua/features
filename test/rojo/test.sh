@@ -42,6 +42,7 @@ source dev-container-features-test-lib
 # check <LABEL> <cmd> [args...]
 check "rokit version" rokit  --version
 check "rojo version" rojo  --version
+check "rokit can install lune and execute it" bash -c 'rokit init && rojo init && rokit trust lune-org/lune && rokit add lune-org/lune && lune setup && lune --version'
 
 # Report results
 # If any of the checks above exited with a non-zero exit code, the test will fail.
