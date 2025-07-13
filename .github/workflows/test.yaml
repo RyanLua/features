@@ -15,7 +15,7 @@ jobs:
         features:
           - rojo
         baseImage:
-          - debian:latest
+          # - debian:latest
           - ubuntu:latest
           - mcr.microsoft.com/devcontainers/base:ubuntu
     steps:
