@@ -100,7 +100,12 @@ fi
 # Install Foreman
 if [ "${TOOLCHAIN_MANAGER}" = "foreman" ]; then
     find_version_from_git_tags FOREMAN_VERSION https://github.com/Roblox/foreman
-    foreman_filename="foreman-linux.zip"
+    if [ "${ARCH}" = "aarch64" ]; then
+        FOREMAN_ARCH="arm64"
+    else
+        FOREMAN_ARCH="${ARCH}"
+    fi
+    foreman_filename="foreman-linux-${FOREMAN_ARCH}.zip"
 
     wget https://github.com/Roblox/foreman/releases/download/v${FOREMAN_VERSION}/${foreman_filename}
     unzip ${foreman_filename} -d $TMPDIR
