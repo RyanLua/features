@@ -1,6 +1,6 @@
 {
     "id": "rojo",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "name": "Rojo",
     "description": "Installs the provided version of Rojo, a toolchain manager and dependencies.",
     "documentationURL": "https://github.com/RyanLua/features/tree/main/src/rojo",
