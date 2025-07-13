@@ -120,6 +120,15 @@ if [ "${TOOLCHAIN_MANAGER}" = "rokit" ]; then
 
     mv $TMPDIR/rokit /usr/local/bin/rokit
     rokit self-install
+    
+    # Ensure ~/.rokit/bin is in PATH
+    rokit_bin_path="$HOME/.rokit/bin"
+    if [ -d "$rokit_bin_path" ] && [[ ":$PATH:" != *":$rokit_bin_path:"* ]]; then
+        echo "Adding $rokit_bin_path to PATH"
+        echo 'export PATH="$HOME/.rokit/bin:$PATH"' >> ~/.bashrc
+        echo 'export PATH="$HOME/.rokit/bin:$PATH"' >> ~/.zshrc
+        export PATH="$rokit_bin_path:$PATH"
+    fi
 fi
 
 # Install Rojo
