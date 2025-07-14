@@ -27,7 +27,7 @@
 #                   --features rojo   \
 #                   --remote-user root \
 #                   --skip-scenarios   \
-#                   --base-image mcr.microsoft.com/devcontainers/base:ubuntu \
+#                   --base-image mcr.microsoft.com/devcontainers/base:ubuntu-22.04 \
 #                   /path/to/this/repo
 
 set -e

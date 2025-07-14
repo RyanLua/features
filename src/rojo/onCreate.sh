@@ -42,7 +42,34 @@ add_to_user_profile() {
 # Set up PATH for all supported toolchain managers
 echo "Setting up PATH for rokit"
 add_to_user_profile "$_REMOTE_USER_HOME" "\$HOME/.rokit/bin"
-echo 'export PATH="$HOME/.rokit/bin:$PATH"' > /etc/profile.d/rokit.sh
-chmod +x /etc/profile.d/rokit.sh
+
+# Try to create global profile entry (requires sudo/root)
+if command -v sudo >/dev/null 2>&1 && sudo test -w /etc/profile.d 2>/dev/null; then
+    echo 'export PATH="$HOME/.rokit/bin:$PATH"' | sudo tee /etc/profile.d/rokit.sh > /dev/null
+    sudo chmod +x /etc/profile.d/rokit.sh
+    echo "Created global profile entry for rokit"
+elif [ -w /etc/profile.d ] 2>/dev/null; then
+    echo 'export PATH="$HOME/.rokit/bin:$PATH"' > /etc/profile.d/rokit.sh
+    chmod +x /etc/profile.d/rokit.sh
+    echo "Created global profile entry for rokit"
+else
+    echo "Skipping global profile entry for rokit (no permission)"
+fi
+
+echo "Setting up PATH for aftman"
+add_to_user_profile "$_REMOTE_USER_HOME" "\$HOME/.aftman/bin"
+
+# Try to create global profile entry (requires sudo/root)
+if command -v sudo >/dev/null 2>&1 && sudo test -w /etc/profile.d 2>/dev/null; then
+    echo 'export PATH="$HOME/.aftman/bin:$PATH"' | sudo tee /etc/profile.d/aftman.sh > /dev/null
+    sudo chmod +x /etc/profile.d/aftman.sh
+    echo "Created global profile entry for aftman"
+elif [ -w /etc/profile.d ] 2>/dev/null; then
+    echo 'export PATH="$HOME/.aftman/bin:$PATH"' > /etc/profile.d/aftman.sh
+    chmod +x /etc/profile.d/aftman.sh
+    echo "Created global profile entry for aftman"
+else
+    echo "Skipping global profile entry for aftman (no permission)"
+fi
 
 echo "Rojo toolchain PATH setup finished"
