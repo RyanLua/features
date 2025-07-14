@@ -3,11 +3,14 @@
 # This test file will be executed against an auto-generated devcontainer.json that
 # includes the 'rojo' Feature with no options.
 #
+# IMPORTANT: This feature requires Ubuntu 22.04+ due to GLIBC compatibility with Rokit.
+# The default ubuntu:focal (20.04) will cause test failures.
+#
 # For more information, see: https://github.com/devcontainers/cli/blob/main/docs/features/test.md
 #
 # Eg:
 # {
-#    "image": "<..some-base-image...>",
+#    "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
 #    "features": {
 #      "rojo": {}
 #    },
