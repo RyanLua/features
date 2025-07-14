@@ -1,6 +1,6 @@
 {
     "rojo_at_pinned_version": {
-        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
         "features": {
             "rojo": {
                 "version": "7.3.0"
@@ -8,7 +8,7 @@
         }
     },
     "install_aftman": {
-        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
         "features": {
             "rojo": {
                 "toolchainManager": "aftman"
@@ -16,7 +16,7 @@
         }
     },
     "install_foreman": {
-        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
         "features": {
             "rojo": {
                 "toolchainManager": "foreman"
@@ -24,7 +24,7 @@
         }
     },
     "install_rokit": {
-        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
         "features": {
             "rojo": {
                 "toolchainManager": "rokit"
