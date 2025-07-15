@@ -44,7 +44,7 @@ check "rokit version" rokit --version
 check "rojo version" rojo --version
 check "rokit can install wally" rokit init && rokit add --force UpliftGames/wally && wally --version
 check "rokit can install wally global" rokit add --global --force UpliftGames/wally && wally --version
-check "rokit can install lune" rokit init && rokit add --force lune-org/lune && lune --version
+check "rokit can install lune" rokit add --force lune-org/lune && lune --version
 check "rokit can install lune global" rokit add --global --force lune-org/lune && lune --version
 
 # Report results
