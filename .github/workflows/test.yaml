@@ -16,8 +16,8 @@ jobs:
           - rojo
         baseImage:
           - debian:trixie
-          - mcr.microsoft.com/devcontainers/base:ubuntu
           - ubuntu:latest
+          - mcr.microsoft.com/devcontainers/base:ubuntu
     steps:
       - uses: actions/checkout@v4
 
