@@ -47,6 +47,7 @@ check "rokit version" rokit --version
 check "rojo version" rojo --version
 check "rokit can install wally" rokit init && rokit add --force UpliftGames/wally && wally --version
 check "rokit can install wally global" rokit add --global --force UpliftGames/wally && wally --version
+check "rokit can lune-org/lune lune global" rokit add --global --force lune-org/lune && lune --version
 
 # Report results
 # If any of the checks above exited with a non-zero exit code, the test will fail.
