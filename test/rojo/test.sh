@@ -7,7 +7,7 @@
 #
 # Eg:
 # {
-#    "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+#    "image": "<..some-base-image...>",
 #    "features": {
 #      "rojo": {}
 #    },
