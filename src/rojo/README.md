@@ -11,31 +11,6 @@ Installs the provided version of Rojo, as well as Aftman and dependencies.
 }
 ```
 
-## Base Image Requirements
-
-**Important**: This feature requires Ubuntu 24.04+ or equivalent due to GLIBC compatibility requirements. 
-
-When using the `rokit` toolchain manager (default), ensure your base image supports GLIBC 2.33+:
-
-```json
-{
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
-  "features": {
-    "ghcr.io/RyanLua/features/rojo:0": {}
-  }
-}
-```
-
-For older base images, use `aftman` or `foreman` instead:
-
-```json
-"features": {
-    "ghcr.io/RyanLua/features/rojo:0": {
-        "toolchainManager": "aftman"
-    }
-}
-```
-
 ## Options
 
 | Options Id | Description | Type | Default Value |
