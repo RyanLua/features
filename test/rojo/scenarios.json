@@ -24,7 +24,7 @@
         }
     },
     "install_rokit": {
-        "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
             "rojo": {
                 "toolchainManager": "rokit"
