@@ -8,15 +8,6 @@ fi
 
 echo "Activating feature 'rojo'"
 
-echo "User: ${_REMOTE_USER}     User home: ${_REMOTE_USER_HOME}"
-
-if [ -z "$_REMOTE_USER" ] || [ -z "$_REMOTE_USER_HOME" ]; then
-  echo "***********************************************************************************"
-  echo "*** Require _REMOTE_USER and _REMOTE_USER_HOME to be set (by dev container CLI) ***"
-  echo "***********************************************************************************"
-  exit 1
-fi
-
 ROJO_VERSION=${VERSION:-"latest"}
 TOOLCHAIN_MANAGER=${TOOLCHAINMANAGER:-"rokit"}
 

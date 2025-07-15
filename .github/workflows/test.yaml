@@ -15,11 +15,9 @@ jobs:
         features:
           - rojo
         baseImage:
-          # - debian:latest
-          - ubuntu:jammy
-          - mcr.microsoft.com/devcontainers/base:ubuntu-22.04
-          # NOTE: ubuntu:latest points to 20.04 (focal) which causes GLIBC issues with rokit
-          # - ubuntu:latest
+          - debian:trixie
+          - mcr.microsoft.com/devcontainers/base:ubuntu-24.04
+          - ubuntu:noble
     steps:
       - uses: actions/checkout@v4
 

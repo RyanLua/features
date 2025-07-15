@@ -13,7 +13,7 @@ Installs the provided version of Rojo, as well as Aftman and dependencies.
 
 ## Base Image Requirements
 
-**Important**: This feature requires Ubuntu 22.04+ or equivalent due to GLIBC compatibility requirements. 
+**Important**: This feature requires Ubuntu 24.04+ or equivalent due to GLIBC compatibility requirements. 
 
 When using the `rokit` toolchain manager (default), ensure your base image supports GLIBC 2.33+:
 
