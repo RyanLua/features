@@ -124,6 +124,16 @@ if [ "${TOOLCHAIN_MANAGER}" = "rokit" ]; then
     unzip ${rokit_filename} -d $TMPDIR
 
     mv $TMPDIR/rokit /usr/local/bin/rokit
+    chmod +x /usr/local/bin/rokit
+    
+    # Check if rokit works with current GLIBC version
+    if ! /usr/local/bin/rokit --version > /dev/null 2>&1; then
+        echo "Warning: Rokit requires a newer GLIBC version than available on this system."
+        echo "Please use a newer base image (Ubuntu 22.04+ or equivalent) or use a different toolchain manager."
+        echo "Available options: 'aftman' or 'foreman'"
+        exit 1
+    fi
+    
     rokit self-install
 fi
 
@@ -134,3 +144,8 @@ rojo_filename="rojo-${ROJO_VERSION}-linux-${ARCH}.zip"
 wget https://github.com/rojo-rbx/rojo/releases/download/v${ROJO_VERSION}/${rojo_filename}
 unzip ${rojo_filename} -d $TMPDIR
 mv $TMPDIR/rojo /usr/local/bin/rojo
+
+# Install onCreate.sh script for PATH configuration
+mkdir -p /usr/local/share/RyanLua-features-rojo
+cp "$(dirname "${BASH_SOURCE[0]}")/onCreate.sh" /usr/local/share/RyanLua-features-rojo/onCreate.sh
+chmod +x /usr/local/share/RyanLua-features-rojo/onCreate.sh
